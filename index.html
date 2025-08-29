@@ -8,49 +8,72 @@
 </head>
 <body>
   <header>
-    <img id="shop-logo" src="logo.png" alt="Coffee Shop Logo" />
+    <img id="logo" src="logo.png" alt="Coffee Shop Logo" />
     <h1>Latte Coffee Shop</h1>
   </header>
 
   <section id="about">
     <h2>About Us</h2>
-    <p id="about-text">
-      Welcome to Latte Coffee Shop, where every sip is crafted with love. From hot classics to refreshing bobas and unique shisha flavors, we bring you the perfect blend of tradition and modern taste.
-    </p>
+    <p id="about-text">Welcome to Latte Coffee Shop, where every sip is crafted with love. From hot classics to refreshing bobas and unique shisha flavors, we bring you the perfect blend of tradition and modern taste.</p>
   </section>
 
   <section id="menu">
     <h2>Our Menu</h2>
-    <div id="menu-container"></div>
+    <div class="menu-category" data-category="Hot">
+      <h3>Hot</h3>
+      <ul class="item-list"></ul>
+    </div>
+    <div class="menu-category" data-category="Cold">
+      <h3>Cold</h3>
+      <ul class="item-list"></ul>
+    </div>
+    <div class="menu-category" data-category="Milkshake">
+      <h3>Milkshake</h3>
+      <ul class="item-list"></ul>
+    </div>
+    <div class="menu-category" data-category="Boba">
+      <h3>Boba</h3>
+      <ul class="item-list"></ul>
+    </div>
+    <div class="menu-category" data-category="Refresher">
+      <h3>Refresher</h3>
+      <ul class="item-list"></ul>
+    </div>
+    <div class="menu-category" data-category="Frappe">
+      <h3>Frappe</h3>
+      <ul class="item-list"></ul>
+    </div>
+    <div class="menu-category" data-category="Sugar Free">
+      <h3>Sugar Free</h3>
+      <ul class="item-list"></ul>
+    </div>
+    <div class="menu-category" data-category="Shisha">
+      <h3>Shisha</h3>
+      <ul class="item-list"></ul>
+    </div>
   </section>
 
   <footer>
-    <a class="btn" href="https://wa.me/96171418947" target="_blank">WhatsApp</a>
-    <a class="btn" href="https://www.instagram.com/latte_coffe_shop?igsh=MWNyeXhvc3hyYTZ0eA%3D%3D&utm_source=qr" target="_blank">Instagram</a>
-    <button id="open-settings" class="btn">⚙️ Settings</button>
+    <a class="whatsapp" href="https://wa.me/96171418947" target="_blank">WhatsApp</a>
+    <a class="instagram" href="https://www.instagram.com/latte_coffe_shop?igsh=MWNyeXhvc3hyYTZ0eA%3D%3D&utm_source=qr" target="_blank">Instagram</a>
+    <button id="settings-btn">⚙️ Settings</button>
   </footer>
 
-  <!-- Admin Panel -->
+  <!-- Admin Panel (hidden by default) -->
   <div id="admin-panel" class="hidden">
-    <div class="panel-content">
-      <h2>Admin Panel</h2>
-      <label>Enter PIN:</label>
-      <input type="password" id="pin-input" />
-      <button id="pin-submit">Unlock</button>
+    <h2>Admin Panel</h2>
+    <label>Change Logo: <input type="file" id="logo-input" /></label>
+    <label>About Text:<textarea id="about-input"></textarea></label>
+    <div id="menu-editor"></div>
+    <button id="save-btn">💾 Save</button>
+  </div>
 
-      <div id="admin-controls" class="hidden">
-        <h3>Edit About</h3>
-        <textarea id="edit-about"></textarea>
-        <h3>Change Logo</h3>
-        <input type="file" id="logo-upload" />
-
-        <h3>Edit Menu</h3>
-        <div id="menu-editor"></div>
-        <button id="add-category">+ Add Category</button>
-
-        <button id="save-changes" class="btn">💾 Save</button>
-      </div>
-      <button id="close-panel" class="btn">Close</button>
+  <!-- PIN Modal -->
+  <div id="pin-modal" class="modal hidden">
+    <div class="modal-content">
+      <h3>Enter Admin PIN</h3>
+      <input type="password" id="pin-input" placeholder="Enter PIN" />
+      <button id="pin-submit">Submit</button>
     </div>
   </div>
 
