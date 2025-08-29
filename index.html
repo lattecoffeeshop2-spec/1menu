@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Latte Coffee Shop</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <img id="shop-logo" src="logo.png" alt="Coffee Shop Logo" />
+    <h1>Latte Coffee Shop</h1>
+  </header>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <p id="about-text">
+      Welcome to Latte Coffee Shop, where every sip is crafted with love. From hot classics to refreshing bobas and unique shisha flavors, we bring you the perfect blend of tradition and modern taste.
+    </p>
+  </section>
+
+  <section id="menu">
+    <h2>Our Menu</h2>
+    <div id="menu-container"></div>
+  </section>
+
+  <footer>
+    <a class="btn" href="https://wa.me/96171418947" target="_blank">WhatsApp</a>
+    <a class="btn" href="https://www.instagram.com/latte_coffe_shop?igsh=MWNyeXhvc3hyYTZ0eA%3D%3D&utm_source=qr" target="_blank">Instagram</a>
+    <button id="open-settings" class="btn">⚙️ Settings</button>
+  </footer>
+
+  <!-- Admin Panel -->
+  <div id="admin-panel" class="hidden">
+    <div class="panel-content">
+      <h2>Admin Panel</h2>
+      <label>Enter PIN:</label>
+      <input type="password" id="pin-input" />
+      <button id="pin-submit">Unlock</button>
+
+      <div id="admin-controls" class="hidden">
+        <h3>Edit About</h3>
+        <textarea id="edit-about"></textarea>
+        <h3>Change Logo</h3>
+        <input type="file" id="logo-upload" />
+
+        <h3>Edit Menu</h3>
+        <div id="menu-editor"></div>
+        <button id="add-category">+ Add Category</button>
+
+        <button id="save-changes" class="btn">💾 Save</button>
+      </div>
+      <button id="close-panel" class="btn">Close</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
